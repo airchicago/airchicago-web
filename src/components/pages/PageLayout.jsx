@@ -1,24 +1,26 @@
 import { AppPages } from '../../utils/definitions/constants';
 import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage';
 import { HomePage } from './HomePage/HomePage';
+import Calendar from '../../Calendar';
 
 export const PageLayout = () => {
-    const { appPage: page } = useAppPageContext();
+  const { appPage: page } = useAppPageContext();
 
-    return (
-        <main>
-            <h2>~ Under Construction ~</h2>
-            {page === AppPages.Home ? (
-                <HomePage />
-            ) : page === AppPages.Mission ? (
-                <div>missing</div>
-            ) : page === AppPages.ContactUs ? (
-                <div>contact us</div>
-            ) : page === AppPages.AboutUs ? (
-                <div>about us</div>
-            ) : (
-                <div>Don't know what page this is</div>
-            )}
-        </main>
-    );
+  return (
+    <main>
+      <h2>~ Under Construction ~</h2>
+      {page === AppPages.Home ? (
+        <HomePage />
+      ) : page === AppPages.Mission ? (
+        <div>missing</div>
+      ) : page === AppPages.ContactUs ? (
+        <div>contact us</div>
+      ) : page === AppPages.AboutUs ? (
+        <div>about us</div>
+      ) : (
+        <div>Don't know what page this is</div>
+      )}
+      <Calendar />
+    </main>
+  );
 };
