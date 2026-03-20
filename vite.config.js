@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   root: '.',
-  base: '/airchicago-web/',
+  base: '/',
   plugins: [react()],
 });
