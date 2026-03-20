@@ -26,10 +26,10 @@
     "eslint": "latest",
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-refresh": "latest",
-    "globals": "latest",
     "gh-pages": "latest",
+    "globals": "latest",
     "jsdom": "latest",
-    "vitest": "latest",
-    "vite": "latest"
+    "vite": "latest",
+    "vitest": "latest"
   }
 }
