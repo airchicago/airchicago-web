@@ -1,7 +1,7 @@
-import { AppPages } from '../../utils/definitions/constants';
-import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage';
-import { HomePage } from './HomePage/HomePage';
-import Calendar from '../../Calendar';
+import { AppPages } from '../../utils/definitions/constants.js';
+import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage.js';
+import { HomePage } from './HomePage.js';
+import Calendar from '../blocks/Calendar.js';
 
 export const PageLayout = () => {
   const { appPage: page } = useAppPageContext();

@@ -1,6 +1,7 @@
+import type { CSSProperties } from 'react';
 import LogoSvg from '../../assets/images/air_logo.svg';
 import { AppPages } from '../../utils/definitions/constants';
-import { NavigationButton } from './NavigationButton/NavigationButton';
+import { NavigationButton } from './NavigationButton';
 
 export const AppHeader = () => {
   return (
@@ -91,4 +92,4 @@ const styles = {
     fontWeight: '600',
     WebkitTextStroke: '0.2vmin black',
   },
-};
+} satisfies Record<string, CSSProperties>;
