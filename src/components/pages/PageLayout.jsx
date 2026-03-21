@@ -12,13 +12,13 @@ export const PageLayout = () => {
       {page === AppPages.Home ? (
         <HomePage />
       ) : page === AppPages.Mission ? (
-        <div>missing</div>
+        <div></div>
       ) : page === AppPages.ContactUs ? (
-        <div>contact us</div>
+        <div></div>
       ) : page === AppPages.AboutUs ? (
-        <div>about us</div>
+        <div></div>
       ) : (
-        <div>Don't know what page this is</div>
+        <div></div>
       )}
       <Calendar />
     </main>
