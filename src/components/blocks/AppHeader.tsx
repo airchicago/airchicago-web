@@ -1,9 +1,11 @@
 import type { CSSProperties } from 'react';
 import LogoSvg from '../../assets/images/air_logo.svg';
+import ChicagoStar from '../../assets/images/chicago_star.svg';
 import { AppPages } from '../../utils/definitions/constants';
 import { NavigationButton } from './NavigationButton';
 
 export const AppHeader = () => {
+  console.log(ChicagoStar);
   return (
     <header style={styles.toolbar}>
       <div style={styles.top}>
@@ -12,14 +14,20 @@ export const AppHeader = () => {
           <div style={styles.leftSide}>
             <img src={LogoSvg} alt="Activists in Resistance Logo" style={styles.logo} />
             <h1 style={styles.title}>
-              <p style={styles.titleText}>Activists</p>{' '}
-              <p style={{ ...styles.titleText, color: '#EF002B' }}>
-                {/* My end goal here would be to give the p tag a "chicago star"
-								 background so that it's a white "in" within a chicago star but 
-								 I can't figure out how to do that right now */}
-                in
-              </p>{' '}
-              <p style={styles.titleText}>Resistance</p>
+              Activists
+              <div
+                style={{
+                  backgroundImage: `url("${ChicagoStar}")`,
+                  backgroundSize: '100% auto',
+                  backgroundRepeat: 'no-repeat',
+                  padding: '30px',
+                  margin: '-30px',
+                  backgroundClip: 'unset',
+                }}
+              >
+                {' in '}
+              </div>
+              Resistance
             </h1>
           </div>
         </a>
@@ -81,10 +89,7 @@ const styles = {
   title: {
     display: 'flex',
     flexDirection: 'row',
-    lineHeight: 1,
     columnGap: '1vw',
-  },
-  titleText: {
     lineHeight: '7vmin',
     fontSize: '7vmin',
     margin: '0',
