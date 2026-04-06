@@ -1,0 +1,47 @@
+name: Calendar Event template
+description: Fill out this to create a calendar event in the code
+title: "Name of Event"
+labels: ["calendar-event"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This Calendar Event issue will kick off an automation to update the website. Be patient as it does its work. Check in with Inky if you need help.
+  - type: input
+    id: event-name
+    attributes:
+      label: Event Name
+      description: A short title for the event
+      placeholder: ex. May Day March
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: You must include Month, Date, and Year or the automation will break
+      placeholder: "ex. May 1, 2026"
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: Time
+      placeholder: "ex. 12:00 PM"
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: "ex. The Bean in Millenium Park"
+    validations:
+      required: true
+  - type: input
+    id: organizers
+    attributes:
+      label: Organizers
+      description: Group names much be separated by a comma
+      placeholder: "AiR,Someone Else,Another Group"
+    validations:
+      required: true
