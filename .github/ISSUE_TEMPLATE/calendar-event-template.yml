@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        This Calendar Event issue will kick off an automation to update the website. Be patient as it does its work. Check in with Inky if you need help.
   - type: input
     id: event-name
     attributes:
