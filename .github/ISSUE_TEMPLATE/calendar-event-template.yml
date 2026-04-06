@@ -45,11 +45,3 @@ body:
       placeholder: "AiR,Someone Else,Another Group"
     validations:
       required: true
-
-### Location
-
-Replace this line with the location of the event
-
-### Organizers (use commas in between group names)
-
-AiR Chicago, Another organization, Someone else
