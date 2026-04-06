@@ -1,0 +1,29 @@
+.calendarevent {
+    border: 1px solid #2a80a2;
+    border-radius: 8px;
+    list-style-type: none;
+    margin: 8px 0;
+    max-width: 80vw;
+    padding: 8px;
+    width: 400px;
+}
+
+.calendarevent-title {
+    text-decoration: underline;
+}
+
+/* .calendarevent-time {
+
+}
+
+.calendarevent-date {
+
+}
+
+.calendarevent-location {
+
+}
+
+.calendarevent-organizers {
+
+} */
