@@ -22,7 +22,6 @@ export const PageLayout = () => {
       ) : (
         <div></div>
       )}
-      <Calendar />
     </main>
   );
 };
