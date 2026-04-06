@@ -8,4 +8,5 @@ export const AppPages = {
     Mission: 2,
     AboutUs: 3,
     ContactUs: 4,
+    Calendar: 5,
 };

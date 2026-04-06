@@ -1,7 +1,7 @@
 import { AppPages } from '../../utils/definitions/constants';
 import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage';
 import { HomePage } from './HomePage/HomePage';
-import Calendar from '../../Calendar';
+import Calendar from './Calendar';
 
 export const PageLayout = () => {
   const { appPage: page } = useAppPageContext();
