@@ -17,6 +17,8 @@ export const PageLayout = () => {
         <div></div>
       ) : page === AppPages.AboutUs ? (
         <div></div>
+      ) : page === AppPages.Calendar ? (
+        <Calendar />
       ) : (
         <div></div>
       )}

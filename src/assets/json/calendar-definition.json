@@ -8,17 +8,6 @@
           ],
           "time":"12:00 PM",
           "location":"Park"
-      },
-      "1777611700000":{
-          "date": "May 2, 2026",
-          "eventName":"Post-May Day March",
-          "organizers":[
-            "AiR Chicago",
-            "Somebody else",
-            "Weasley the wonder dog"
-          ],
-          "time":"2:00 PM",
-          "location":"Park"
       }
    }
 }

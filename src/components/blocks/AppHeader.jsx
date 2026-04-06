@@ -26,16 +26,19 @@ export const AppHeader = () => {
       <nav style={styles.bottom}>
         <div style={{ borderLeft: '2px solid rgba(0, 0, 0, 0.5)' }}>
           <NavigationButton buttonPage={AppPages.Home}>
-            <h3>Home</h3>
+            Home
           </NavigationButton>
           <NavigationButton buttonPage={AppPages.Mission}>
-            <h3>Mission</h3>
+            Mission
           </NavigationButton>
           <NavigationButton buttonPage={AppPages.AboutUs}>
-            <h3>About us</h3>
+            About us
           </NavigationButton>
           <NavigationButton buttonPage={AppPages.ContactUs}>
-            <h3>Contact us</h3>
+            Contact us
+          </NavigationButton>
+          <NavigationButton buttonPage={AppPages.Calendar}>
+            Calendar
           </NavigationButton>
         </div>
       </nav>
