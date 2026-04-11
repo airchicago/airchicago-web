@@ -1,13 +1,14 @@
-import { AppPages } from '../../utils/definitions/constants.js';
-import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage.js';
-import { HomePage } from './HomePage.js';
-import Calendar from '../blocks/Calendar.js';
+import { AppPages } from '../../utils/definitions/constants';
+import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage';
+import { HomePage } from './HomePage';
+import Calendar from '../blocks/Calendar';
+import type { CSSProperties } from 'react';
 
 export const PageLayout = () => {
   const { appPage: page } = useAppPageContext();
 
   return (
-    <main>
+    <main style={styles.mainContainer}>
       <h2>~ Under Construction ~</h2>
       {page === AppPages.Home ? (
         <HomePage />
@@ -24,3 +25,14 @@ export const PageLayout = () => {
     </main>
   );
 };
+
+const styles = {
+  mainContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    boxSizing: 'border-box',
+  },
+} satisfies Record<string, CSSProperties>;

@@ -1,5 +1,5 @@
-import { createContext, useContext, useMemo, useState } from 'react';
-import { AppPages } from '../../definitions/constants.js';
+import { createContext, useContext, useMemo, useState } from "react";
+import { AppPages } from "../../definitions/constants";
 
 export interface AppPageContext {
   appPage: AppPages;

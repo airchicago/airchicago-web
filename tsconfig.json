@@ -9,7 +9,7 @@
     // See also https://aka.ms/tsconfig/module
     "module": "es6",
     "moduleResolution": "bundler",
-    "lib": ["ES6"],
+    "lib": ["ES6", "DOM"],
     "target": "es6",
     "types": ["vite/client", "node", "jest"],
 

@@ -1,5 +1,5 @@
-import { AppPages } from '../../utils/definitions/constants.js';
-import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage.js';
+import { AppPages } from '../../utils/definitions/constants';
+import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage';
 import { useState, type CSSProperties } from 'react';
 
 type Props = {
@@ -16,7 +16,6 @@ export const NavigationButton = (props: Props) => {
 
   return (
     <button
-      //   className={classes.button}
       aria-disabled={isDisabled}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

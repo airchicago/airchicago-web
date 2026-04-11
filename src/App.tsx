@@ -1,6 +1,6 @@
-import { AppHeader } from './components/blocks/AppHeader.js';
-import { AppPageProvider } from './utils/hooks/contextBased/useAppPage.js';
-import { PageLayout } from './components/pages/PageLayout.js';
+import { AppHeader } from './components/blocks/AppHeader';
+import { AppPageProvider } from './utils/hooks/contextBased/useAppPage';
+import { PageLayout } from './components/pages/PageLayout';
 
 function App() {
   return (

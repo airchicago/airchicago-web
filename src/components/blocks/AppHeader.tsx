@@ -5,14 +5,17 @@ import { AppPages } from '../../utils/definitions/constants';
 import { NavigationButton } from './NavigationButton';
 
 export const AppHeader = () => {
-  console.log(ChicagoStar);
   return (
     <header style={styles.toolbar}>
       <div style={styles.top}>
         {/* Left side items */}
-        <a href="/" style={{ textDecoration: 'none' }}>
+        <a href='/' style={{ textDecoration: 'none' }}>
           <div style={styles.leftSide}>
-            <img src={LogoSvg} alt="Activists in Resistance Logo" style={styles.logo} />
+            <img
+              src={LogoSvg}
+              alt='Activists in Resistance Logo'
+              style={styles.logo}
+            />
             <h1 style={styles.title}>
               Activists
               <div
