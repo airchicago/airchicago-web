@@ -22,14 +22,18 @@
   "devDependencies": {
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "latest",
     "eslint": "latest",
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-refresh": "latest",
-    "globals": "latest",
     "gh-pages": "latest",
+    "globals": "latest",
     "jsdom": "latest",
-    "vitest": "latest",
-    "vite": "latest"
+    "typescript": "^5.9.3",
+    "vite": "latest",
+    "vitest": "latest"
   }
 }
