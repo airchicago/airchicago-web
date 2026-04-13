@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import LogoSvg from '../../assets/images/air_logo.svg';
 import ChicagoStar from '../../assets/images/chicago_star.svg';
-import { AppPages } from '../../utils/definitions/constants';
+import { AppPages, AppRoutes } from '../../utils/definitions/routeDefinitions';
 import { NavigationButton } from './NavigationButton';
 
 export const AppHeader = () => {
@@ -37,16 +37,16 @@ export const AppHeader = () => {
       </div>
       <nav style={styles.bottom}>
         <div style={{ borderLeft: '2px solid rgba(0, 0, 0, 0.5)' }}>
-          <NavigationButton buttonPage={AppPages.Home}>
+          <NavigationButton to={AppRoutes[AppPages.Home]}>
             <h3>Home</h3>
           </NavigationButton>
-          <NavigationButton buttonPage={AppPages.Mission}>
+          <NavigationButton to={AppRoutes[AppPages.Mission]}>
             <h3>Mission</h3>
           </NavigationButton>
-          <NavigationButton buttonPage={AppPages.AboutUs}>
+          <NavigationButton to={AppRoutes[AppPages.AboutUs]}>
             <h3>About us</h3>
           </NavigationButton>
-          <NavigationButton buttonPage={AppPages.ContactUs}>
+          <NavigationButton to={AppRoutes[AppPages.ContactUs]}>
             <h3>Contact us</h3>
           </NavigationButton>
         </div>

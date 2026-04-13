@@ -1,28 +1,30 @@
-import { AppPages } from '../../utils/definitions/constants';
-import { useAppPageContext } from '../../utils/hooks/contextBased/useAppPage';
-import { HomePage } from './HomePage';
-import Calendar from '../blocks/Calendar';
 import type { CSSProperties } from 'react';
+import { Outlet, useNavigate } from 'react-router';
+import { AppHeader } from '../blocks/AppHeader';
+import { useAppLocation } from '../../utils/hooks/useAppLocation';
+import { AppPages, AppRoutes } from '../../utils/definitions/routeDefinitions';
 
 export const PageLayout = () => {
-  const { appPage: page } = useAppPageContext();
+  const appPage = useAppLocation();
+  const navigate = useNavigate();
+
+  if (appPage === AppPages.Invalid) {
+    console.error(
+      `Invalid path at '${location.pathname}'. Redirecting to home page`,
+    );
+    navigate(AppRoutes[AppPages.Home]);
+  }
 
   return (
-    <main style={styles.mainContainer}>
-      <h2>~ Under Construction ~</h2>
-      {page === AppPages.Home ? (
-        <HomePage />
-      ) : page === AppPages.Mission ? (
-        <div></div>
-      ) : page === AppPages.ContactUs ? (
-        <div></div>
-      ) : page === AppPages.AboutUs ? (
-        <div></div>
-      ) : (
-        <div></div>
-      )}
-      <Calendar />
-    </main>
+    <>
+      {/* Uses <header> so no need to rewrap */}
+      <AppHeader />
+
+      <main style={styles.mainContainer}>
+        <h2>~ Under Construction ~</h2>
+        <Outlet />
+      </main>
+    </>
   );
 };
 
