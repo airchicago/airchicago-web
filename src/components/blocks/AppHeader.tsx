@@ -17,7 +17,7 @@ export const AppHeader = () => {
               style={styles.logo}
             />
             <h1 style={styles.title}>
-              Activists
+              <p style={{ zIndex: 1 }}>Activists</p>
               <div
                 style={{
                   backgroundImage: `url("${ChicagoStar}")`,
@@ -30,7 +30,7 @@ export const AppHeader = () => {
               >
                 {' in '}
               </div>
-              Resistance
+              <p style={{ zIndex: 1 }}>Resistance</p>
             </h1>
           </div>
         </a>

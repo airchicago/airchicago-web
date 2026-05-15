@@ -3,6 +3,7 @@ import { Outlet, useNavigate } from 'react-router';
 import { AppHeader } from '../blocks/AppHeader';
 import { useAppLocation } from '../../utils/hooks/useAppLocation';
 import { AppPages, AppRoutes } from '../../utils/definitions/routeDefinitions';
+import { SocialWidgets } from '../blocks/SocialWidgets';
 
 export const PageLayout = () => {
   const appPage = useAppLocation();
@@ -23,6 +24,7 @@ export const PageLayout = () => {
       <main style={styles.mainContainer}>
         <h2>~ Under Construction ~</h2>
         <Outlet />
+        <SocialWidgets />
       </main>
     </>
   );
@@ -33,8 +35,10 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'start',
     flexWrap: 'wrap',
+    flexGrow: 1,
     boxSizing: 'border-box',
+    marginRight: '15%',
   },
 } satisfies Record<string, CSSProperties>;

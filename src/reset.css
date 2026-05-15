@@ -22,6 +22,7 @@
 }
 
 body {
+  height: 100vh;
   /* 4. Increase line-height */
   line-height: 1.5;
   /* 5. Improve text rendering */
@@ -72,13 +73,15 @@ h6 {
 }
 
 /*
-        10. Create a root stacking context
-      */
+  10. Create a root stacking context
+*/
 #root,
 #__next {
   isolation: isolate;
 }
 .root {
+  display: flex;
+  flex-direction: column;
   font-family:
     Big Shoulders,
     Helvetica,
@@ -87,4 +90,5 @@ h6 {
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light;
+  height: 100vh;
 }
