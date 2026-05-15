@@ -1,14 +1,8 @@
-import { AppHeader } from './components/blocks/AppHeader';
-import { AppPageProvider } from './utils/hooks/contextBased/useAppPage';
-import { PageLayout } from './components/pages/PageLayout';
+import { RouterProvider } from 'react-router';
+import { routes } from './utils/definitions/routeDefinitions';
 
 function App() {
-  return (
-    <AppPageProvider>
-      <AppHeader />
-      <PageLayout />
-    </AppPageProvider>
-  );
+  return <RouterProvider router={routes} />;
 }
 
 export default App;
