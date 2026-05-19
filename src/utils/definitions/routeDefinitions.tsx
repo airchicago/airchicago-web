@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router';
 import Calendar from '../../components/blocks/Calendar';
 import { HomePage } from '../../components/pages/HomePage';
 import { PageLayout } from '../../components/pages/PageLayout';
+import { ContactUs } from '../../components/pages/ContactUs';
 
 export enum AppPages {
   Invalid = 0,
@@ -28,7 +29,7 @@ export const routes = createBrowserRouter([
       { path: AppRoutes[AppPages.Calendar], Component: () => <Calendar /> },
       { path: AppRoutes[AppPages.Mission], Component: () => <div /> },
       { path: AppRoutes[AppPages.AboutUs], Component: () => <div /> },
-      { path: AppRoutes[AppPages.ContactUs], Component: () => <div /> },
+      { path: AppRoutes[AppPages.ContactUs], Component: () => <ContactUs /> },
     ],
   },
 ]);

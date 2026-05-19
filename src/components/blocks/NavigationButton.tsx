@@ -12,9 +12,9 @@ export const NavigationButton = (props: Props) => {
   const [isBeingClicked, setIsBeingClicked] = useState(false);
 
   return (
-    <NavLink to={props.to}>
+    <NavLink to={props.to} style={{ textDecoration: 'none' }}>
       {({ isActive }) => (
-        <button
+        <div
           aria-disabled={isActive}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -34,7 +34,7 @@ export const NavigationButton = (props: Props) => {
           }}
         >
           {props.children}
-        </button>
+        </div>
       )}
     </NavLink>
   );
@@ -48,7 +48,6 @@ const styles = {
     fontWeight: 600,
     border: 'unset',
     padding: '12px',
-    borderRight: '2px solid rgba(0, 0, 0, 0.5)',
     transition: 'background-color 0.1s',
   },
 } satisfies Record<string, CSSProperties>;

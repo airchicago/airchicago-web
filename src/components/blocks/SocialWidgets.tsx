@@ -6,15 +6,18 @@ import { BlueSky } from '../reactIcons/BlueSky';
 import { Substack } from '../reactIcons/Substack';
 import { Threads } from '../reactIcons/Threads';
 
-const socials = [];
+interface Props {
+  top: number;
+}
 
-export const SocialWidgets = () => {
+export const SocialWidgets = (props: Props) => {
   return (
-    <div style={styles.floatingBox}>
+    <div style={{ ...styles.floatingBox, top: props.top }}>
       <div style={styles.body}>
         <span>
           <h2>Socials</h2>
           <h4>Tracker free links!</h4>
+          <p>That is, until you click on one</p>
         </span>
         <Link
           to='https://www.instagram.com/air.activists.in.resistance'
@@ -64,7 +67,6 @@ export const SocialWidgets = () => {
 const styles = {
   floatingBox: {
     position: 'absolute',
-    top: 'auto',
     right: 0,
     width: '15%',
   },

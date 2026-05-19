@@ -1,12 +1,15 @@
-import type { CSSProperties } from 'react';
+import { useRef, type CSSProperties } from 'react';
 import LogoSvg from '../../assets/images/air_logo.svg';
 import ChicagoStar from '../../assets/images/chicago_star.svg';
 import { AppPages, AppRoutes } from '../../utils/definitions/routeDefinitions';
 import { NavigationButton } from './NavigationButton';
+import { SocialWidgets } from './SocialWidgets';
 
 export const AppHeader = () => {
+  const headerRef = useRef<HTMLElement | null>(null);
+
   return (
-    <header style={styles.toolbar}>
+    <header ref={headerRef} style={styles.toolbar}>
       <div style={styles.top}>
         {/* Left side items */}
         <a href='/' style={{ textDecoration: 'none' }}>
@@ -36,7 +39,7 @@ export const AppHeader = () => {
         </a>
       </div>
       <nav style={styles.bottom}>
-        <div style={{ borderLeft: '2px solid rgba(0, 0, 0, 0.5)' }}>
+        <div style={styles.bottomButtons}>
           <NavigationButton to={AppRoutes[AppPages.Home]}>
             <h3>Home</h3>
           </NavigationButton>
@@ -51,6 +54,9 @@ export const AppHeader = () => {
           </NavigationButton>
         </div>
       </nav>
+      <SocialWidgets
+        top={headerRef.current?.getBoundingClientRect().bottom || 0}
+      />
     </header>
   );
 };
@@ -62,6 +68,9 @@ const styles = {
     alignItems: 'start',
     justifyContent: 'start',
     backgroundColor: '#40a5cd',
+    position: 'sticky',
+    top: 0,
+    width: '100%',
   },
   top: {
     display: 'flex',
@@ -79,6 +88,15 @@ const styles = {
     width: '100%',
     backgroundColor: '#2a80a2',
     padding: '0px 4vw',
+  },
+  bottomButtons: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'start',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    columnGap: '2px',
+    padding: '0 2px',
   },
   leftSide: {
     display: 'flex',

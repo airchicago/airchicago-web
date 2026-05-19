@@ -1,7 +1,11 @@
 import type { CSSProperties } from 'react';
 
 export const HomePage = () => {
-  return <div style={styles.mainBody}></div>;
+  return (
+    <div style={styles.mainBody}>
+      <h2>~ Under Construction ~</h2>
+    </div>
+  );
 };
 
 const styles = {
